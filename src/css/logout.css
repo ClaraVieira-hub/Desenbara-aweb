@@ -1,0 +1,280 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background: linear-gradient(
+        to bottom,
+        #eadcff 0%,
+        #d3adff 50%,
+        #ad72f5 100%
+    );
+}
+
+
+/* ==============================
+   CONTAINER
+================================= */
+
+.logout-container {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==============================
+   CARD
+================================= */
+
+.logout-box {
+
+    width: 204px;
+    height: 215px;
+
+    padding: 17px 25px;
+
+    background-color: #fffafa;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* ==============================
+   TÍTULO
+================================= */
+
+.logout-box h1 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 11px;
+
+    font-weight: normal;
+
+    color: #111;
+
+    text-align: center;
+
+    margin-bottom: 9px;
+}
+
+
+/* ==============================
+   ÍCONE
+================================= */
+
+.logout-icon {
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #eee4ff,
+        #f5efff
+    );
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+
+.logout-icon i {
+
+    font-size: 30px;
+
+    color: #000;
+
+    line-height: 1;
+}
+
+
+/* ==============================
+   MENSAGEM
+================================= */
+
+.logout-message {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 9px;
+
+    color: #222;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   BOTÕES
+================================= */
+
+.buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+    width: 100%;
+}
+
+
+.buttons button {
+
+    width: 75px;
+    height: 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* ==============================
+   BOTÃO SAIR
+================================= */
+
+.btn-sair {
+
+    background-color: #ae67f5;
+
+    color: white;
+}
+
+
+.btn-sair:hover {
+
+    background-color: #9950e5;
+
+    transform: scale(1.03);
+}
+
+
+/* ==============================
+   BOTÃO CANCELAR
+================================= */
+
+.btn-cancelar {
+
+    background-color: #e8d3ff;
+
+    color: #333;
+}
+
+
+.btn-cancelar:hover {
+
+    background-color: #d7b9f5;
+
+    transform: scale(1.03);
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 500px) {
+
+    .logout-box {
+
+        width: 125px;
+        height: 220px;
+
+        padding: 15px 9px;
+
+        border-radius: 15px;
+    }
+
+
+    .logout-box h1 {
+
+        font-size: 8px;
+
+        margin-bottom: 9px;
+    }
+
+
+    .logout-icon {
+
+        width: 65px;
+        height: 65px;
+
+        margin-bottom: 11px;
+    }
+
+
+    .logout-icon i {
+
+        font-size: 29px;
+    }
+
+
+    .logout-message {
+
+        font-size: 7px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .buttons {
+
+        gap: 6px;
+    }
+
+
+    .buttons button {
+
+        width: 65px;
+        height: 16px;
+
+        font-size: 7px;
+    }
+
+}
