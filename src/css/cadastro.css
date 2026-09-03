@@ -1,0 +1,347 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background: linear-gradient(
+        to bottom,
+        #eadcff 0%,
+        #d3adff 50%,
+        #ad72f5 100%
+    );
+}
+
+
+/* ==============================
+   CONTAINER
+================================= */
+
+.cadastro-container {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==============================
+   CARD
+================================= */
+
+.cadastro-box {
+
+    width: 225px;
+    min-height: 310px;
+
+    padding: 17px 31px;
+
+    background-color: #fffafa;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* ==============================
+   TÍTULO
+================================= */
+
+.cadastro-box h1 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 11px;
+
+    font-weight: normal;
+
+    color: #111;
+
+    text-align: center;
+
+    margin: 0 0 8px 0;
+}
+
+
+/* ==============================
+   ÍCONE
+================================= */
+
+.user-icon {
+
+    width: 65px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #eee4ff,
+        #f5efff
+    );
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+
+.user-icon i {
+
+    font-size: 28px;
+
+    color: #000;
+
+    line-height: 1;
+}
+
+
+/* ==============================
+   FORMULÁRIO
+================================= */
+
+.cadastro-box form {
+
+    width: 100%;
+}
+
+
+/* ==============================
+   CAMPOS
+================================= */
+
+.input-group-custom {
+
+    width: 100%;
+
+    margin-bottom: 7px;
+}
+
+
+.input-group-custom label {
+
+    display: block;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 8px;
+
+    color: #222;
+
+    margin-bottom: 3px;
+}
+
+
+.input-group-custom input {
+
+    width: 100%;
+
+    height: 17px;
+
+    padding: 0 8px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 10px;
+
+    background-color: #e8d3ff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 8px;
+}
+
+
+/* ==============================
+   CAMPO SELECIONADO
+================================= */
+
+.input-group-custom input:focus {
+
+    background-color: #e8d3ff;
+
+    box-shadow: 0 0 0 2px #c18aff;
+}
+
+
+/* ==============================
+   BOTÃO
+================================= */
+
+.cadastro-box button {
+
+    display: block;
+
+    width: 82px;
+    height: 18px;
+
+    margin: 13px auto 0;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #ae67f5;
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.cadastro-box button:hover {
+
+    background-color: #9950e5;
+
+    transform: scale(1.03);
+}
+
+
+/* ==============================
+   LINK PARA LOGIN
+================================= */
+
+.login-link {
+
+    margin-top: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 7px;
+
+    color: #333;
+
+    text-align: center;
+}
+
+
+.login-link a {
+
+    color: #9950e5;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.login-link a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 500px) {
+
+    .cadastro-box {
+
+        width: 125px;
+
+        min-height: 315px;
+
+        padding: 15px 9px;
+
+        border-radius: 15px;
+    }
+
+
+    .cadastro-box h1 {
+
+        font-size: 8px;
+
+        margin-bottom: 9px;
+    }
+
+
+    .user-icon {
+
+        width: 65px;
+        height: 65px;
+
+        margin-bottom: 11px;
+    }
+
+
+    .user-icon i {
+
+        font-size: 29px;
+    }
+
+
+    .input-group-custom {
+
+        margin-bottom: 7px;
+    }
+
+
+    .input-group-custom label {
+
+        font-size: 7px;
+    }
+
+
+    .input-group-custom input {
+
+        height: 16px;
+
+        font-size: 7px;
+    }
+
+
+    .cadastro-box button {
+
+        width: 70px;
+
+        height: 16px;
+
+        margin-top: 11px;
+
+        font-size: 7px;
+    }
+
+
+    .login-link {
+
+        font-size: 6px;
+
+        margin-top: 11px;
+    }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+
+        <div class="cadastro-box">
+
+            <h1>Crie sua conta!</h1>
+
+            <!-- Ícone -->
+            <div class="user-icon">
+                <i class="bi bi-person-plus"></i>
+            </div>
+
+
+            <form id="cadastroForm">
+
+                <!-- Nome -->
+                <div class="input-group-custom">
+
+                    <label for="nome">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        autocomplete="name"
+                    >
+
+                </div>
+
+
+                <!-- Email ou telefone -->
+                <div class="input-group-custom">
+
+                    <label for="email">
+                        Email ou telefone
+                    </label>
+
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        autocomplete="username"
+                    >
+
+                </div>
+
+
+                <!-- Senha -->
+                <div class="input-group-custom">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        autocomplete="new-password"
+                    >
+
+                </div>
+
+
+                <!-- Confirmar senha -->
+                <div class="input-group-custom">
+
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        name="confirmarSenha"
+                        autocomplete="new-password"
+                    >
+
+                </div>
+
+
+                <!-- Botão -->
+                <button type="submit">
+                    Cadastrar
+                </button>
+
+            </form>
+
+
+            <!-- Link para login -->
+            <p class="login-link">
+                Já possui uma conta?
+                <a href="index.html">Entrar</a>
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ========================= -->
+    <!-- VLibras -->
+    <!-- ========================= -->
+
+    <div vw class="enabled">
+
+        <div vw-access-button class="active"></div>
+
+        <div vw-plugin-wrapper>
+
+            <div class="vw-plugin-top-wrapper"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+
+        new window.VLibras.Widget({
+            rootPath: "https://vlibras.gov.br/app"
+        });
+
+    </script>
+
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Seu JS -->
+    <script src="../js/cadastro.js"></script>
+
+</body>
+
+</html>
