@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Meus cursos</title>
+
+
+    <!-- ==============================
+         BOOTSTRAP
+    =============================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==============================
+         BOOTSTRAP ICONS
+    =============================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- ==============================
+         CSS
+    =============================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/meuscursos.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         MENU LATERAL
+    ================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+            <div class="sidebar-header">
+
+            <div class="logo">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <span>Desenbaraça</span>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="../html/inicio.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-house"></i>
+
+                <span>Página inicial</span>
+
+            </a>
+
+
+            <a
+                href="../html/meuscursos.html"
+                class="menu-item active"
+            >
+
+                <i class="bi bi-book"></i>
+
+                <span>Meus cursos</span>
+
+            </a>
+
+
+            <a
+                href="../html/explorar.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-grid"></i>
+
+                <span>Explorar cursos</span>
+
+            </a>
+
+
+            <a
+                href="../html/certificados.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-award"></i>
+
+                <span>Certificados</span>
+
+            </a>
+
+
+            <a
+                href="../html/perfil.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-person"></i>
+
+                <span>Meu perfil</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="../html/logout.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>  
+
+          
+
+    </aside>
+
+
+    <!-- =================================
+         OVERLAY MOBILE
+    ================================== -->
+
+    <div
+        class="overlay"
+        id="overlay"
+    ></div>
+
+
+    <!-- =================================
+         PÁGINA
+    ================================== -->
+
+    <div class="page">
+
+
+        <!-- =================================
+             TOPO
+        ================================== -->
+
+        <header class="topbar">
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+            >
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="page-title">
+
+                <i class="bi bi-book"></i>
+
+                <span>Meus cursos</span>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar cursos..."
+                >
+
+            </div>
+
+
+            <button
+                class="profile-button"
+            >
+
+                <i class="bi bi-person"></i>
+
+            </button>
+
+        </header>
+
+
+        <!-- =================================
+             CONTEÚDO
+        ================================== -->
+
+        <main class="content">
+
+
+            <!-- Cabeçalho -->
+
+            <section class="page-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        APRENDIZADO
+                    </span>
+
+                    <h1>
+                        Meus cursos
+                    </h1>
+
+                    <p>
+                        Continue sua jornada de aprendizado.
+                    </p>
+
+                </div>
+
+
+                <div class="course-counter">
+
+                    <strong id="courseCount">
+                        0
+                    </strong>
+
+                    <span>
+                        cursos encontrados
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 FILTROS
+            ================================== -->
+
+            <section class="filters">
+
+                <button
+                    class="filter active"
+                    data-filter="todos"
+                >
+                    Todos
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-filter="cabelo"
+                >
+                    Cabelo
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-filter="beleza"
+                >
+                    Beleza
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-filter="empreendedorismo"
+                >
+                    Empreendedorismo
+                </button>
+
+            </section>
+
+
+            <!-- =================================
+                 CARREGAMENTO
+            ================================== -->
+
+            <div
+                class="loading"
+                id="loading"
+            >
+
+                <div class="spinner-border"></div>
+
+                <p>
+                    Buscando cursos...
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 CURSOS
+            ================================== -->
+
+            <div id="coursesContainer" class="courses-grid">
+
+    <!-- GRUPO BOTICÁRIO -->
+    <article class="course-card">
+        <div class="course-image">
+            <span class="course-badge">GRUPO BOTICÁRIO</span>
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+                 alt="Curso de maquiagem">
+        </div>
+
+        <div class="course-content">
+            <span class="course-category">BELEZA</span>
+
+            <h3>Maquiagem Profissional</h3>
+
+            <p>
+                Aprenda técnicas de maquiagem profissional,
+                preparação de pele e atendimento para clientes.
+            </p>
+
+            <div class="course-info">
+                <span><i class="bi bi-clock"></i> 4h20</span>
+                <span><i class="bi bi-patch-check"></i> Certificado</span>
+            </div>
+
+            <a href="https://empreendedorasdabeleza.grupoboticario.com.br/"
+               target="_blank"
+               class="btn-course">
+                VER CURSO
+            </a>
+        </div>
+    </article>
+
+
+    <!-- TRANCISTA -->
+    <article class="course-card">
+        <div class="course-image">
+            <span class="course-badge">GRUPO BOTICÁRIO</span>
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80"
+                 alt="Tranças">
+        </div>
+
+        <div class="course-content">
+            <span class="course-category">CABELO</span>
+
+            <h3>Trancista</h3>
+
+            <p>
+                Formação voltada para quem deseja desenvolver
+                habilidades profissionais na área de tranças.
+            </p>
+
+            <div class="course-info">
+                <span><i class="bi bi-scissors"></i> Beleza</span>
+                <span><i class="bi bi-patch-check"></i> Certificado</span>
+            </div>
+
+            <a href="https://empreendedorasdabeleza.grupoboticario.com.br/"
+               target="_blank"
+               class="btn-course">
+                VER CURSO
+            </a>
+        </div>
+    </article>
+
+
+    <!-- EMPREENDEDORISMO BOTICÁRIO -->
+    <article class="course-card">
+        <div class="course-image">
+            <span class="course-badge">GRUPO BOTICÁRIO</span>
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+                 alt="Empreendedorismo">
+        </div>
+
+        <div class="course-content">
+            <span class="course-category">EMPREENDEDORISMO</span>
+
+            <h3>Prazer, Empresária!</h3>
+
+            <p>
+                Aprenda gestão financeira, posicionamento de marca,
+                produtividade e estratégias para seu negócio.
+            </p>
+
+            <div class="course-info">
+                <span><i class="bi bi-clock"></i> 3h</span>
+                <span><i class="bi bi-patch-check"></i> Gratuito</span>
+            </div>
+
+            <a href="https://empreendedorasdabeleza.grupoboticario.com.br/cursos/empreendedorismo"
+               target="_blank"
+               class="btn-course">
+                VER CURSO
+            </a>
+        </div>
+    </article>
+
+
+    <!-- HUB BOTICÁRIO -->
+    <article class="course-card">
+        <div class="course-image">
+            <span class="course-badge">GRUPO BOTICÁRIO</span>
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+                 alt="Gestão de negócios">
+        </div>
+
+        <div class="course-content">
+            <span class="course-category">NEGÓCIOS</span>
+
+            <h3>HUB de Aceleração de Negócios</h3>
+
+            <p>
+                Desenvolva sua visão estratégica, organize seu negócio
+                e aprenda a acelerar seus resultados.
+            </p>
+
+            <div class="course-info">
+                <span><i class="bi bi-clock"></i> 7h</span>
+                <span><i class="bi bi-briefcase"></i> Negócios</span>
+            </div>
+
+            <a href="https://hubaceleracao.grupoboticario.com.br/empreendedoras-da-beleza"
+               target="_blank"
+               class="btn-course">
+                VER CURSO
+            </a>
+        </div>
+    </article>
+
+
+    <!-- SEBRAE -->
+    <article class="course-card">
+        <div class="course-image">
+            <span class="course-badge">SEBRAE</span>
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80"
+                 alt="Empreendedora">
+        </div>
+
+        <div class="course-content">
+            <span class="course-category">BELEZA + NEGÓCIOS</span>
+
+            <h3>Beleza</h3>
+
+            <p>
+                Desenvolva competências para atuar e administrar
+                um negócio no segmento da beleza.
+            </p>
+
+            <div class="course-info">
+                <span><i class="bi bi-clock"></i> 30h</span>
+                <span><i class="bi bi-gift"></i> Gratuito</span>
+            </div>
+
+            <a href="https://loja.sebrae.com.br/beleza-1-312000078504"
+               target="_blank"
+               class="btn-course">
+                VER CURSO
+            </a>
+        </div>
+    </article>
+
+
+    <!-- FUNDAÇÃO BRADESCO -->
+    <article class="course-card">
+        <div class="course-image">
+            <span class="course-badge">FUNDAÇÃO BRADESCO</span>
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80"
+                 alt="Empreendedorismo e inovação">
+        </div>
+
+        <div class="course-content">
+            <span class="course-category">EMPREENDEDORISMO</span>
+
+            <h3>Empreendedorismo e Inovação</h3>
+
+            <p>
+                Aprenda sobre postura empreendedora, inovação,
+                oportunidades e plano de negócios.
+            </p>
+
+            <div class="course-info">
+                <span><i class="bi bi-clock"></i> 12h</span>
+                <span><i class="bi bi-patch-check"></i> Online</span>
+            </div>
+
+            <a href="https://www.ev.org.br/cursos"
+               target="_blank"
+               class="btn-course">
+                VER CURSO
+            </a>
+        </div>
+    </article>
+
+
+    <!-- FUNDAÇÃO BRADESCO - ESTRATÉGIA -->
+    <article class="course-card">
+        <div class="course-image">
+            <span class="course-badge">FUNDAÇÃO BRADESCO</span>
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
+                 alt="Estratégia de negócios">
+        </div>
+
+        <div class="course-content">
+            <span class="course-category">GESTÃO</span>
+
+            <h3>Estratégia de Negócios</h3>
+
+            <p>
+                Aprenda conceitos de administração, estratégia,
+                vantagem competitiva e planejamento.
+            </p>
+
+            <div class="course-info">
+                <span><i class="bi bi-clock"></i> 20h</span>
+                <span><i class="bi bi-laptop"></i> Online</span>
+            </div>
+
+            <a href="https://www.ev.org.br/cursos/estrategia-de-negocios"
+               target="_blank"
+               class="btn-course">
+                VER CURSO
+            </a>
+        </div>
+    </article>
+
+
+    <!-- FUNDAÇÃO BRADESCO - COMUNICAÇÃO -->
+    <article class="course-card">
+        <div class="course-image">
+            <span class="course-badge">FUNDAÇÃO BRADESCO</span>
+            <img src="https://images.unsplash.com/photo-1556761175-54ebf1d6f8b9?auto=format&fit=crop&w=800&q=80"
+                 alt="Comunicação empresarial">
+        </div>
+
+        <div class="course-content">
+            <span class="course-category">DESENVOLVIMENTO</span>
+
+            <h3>Comunicação Empresarial</h3>
+
+            <p>
+                Desenvolva sua comunicação profissional para melhorar
+                o relacionamento com clientes e parceiros.
+            </p>
+
+            <div class="course-info">
+                <span><i class="bi bi-clock"></i> 12h</span>
+                <span><i class="bi bi-laptop"></i> Online</span>
+            </div>
+
+            <a href="https://www.ev.org.br/cursos/comunicacao-empresarial"
+               target="_blank"
+               class="btn-course">
+                VER CURSO
+            </a>
+        </div>
+    </article>
+
+</div>
+
+
+            <!-- =================================
+                 SEM RESULTADOS
+            ================================== -->
+
+            <div
+                class="empty"
+                id="empty"
+            >
+
+                <i class="bi bi-search"></i>
+
+                <h2>
+                    Nenhum curso encontrado
+                </h2>
+
+                <p>
+                    Tente pesquisar por outro termo.
+                </p>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =================================
+         VLIBRAS
+    ================================== -->
+
+    <div vw class="enabled">
+
+        <div vw-access-button class="active"></div>
+
+        <div vw-plugin-wrapper>
+
+            <div class="vw-plugin-top-wrapper"></div>
+
+        </div>
+
+    </div>
+
+
+    <script
+        src="https://vlibras.gov.br/app/vlibras-plugin.js">
+    </script>
+
+
+    <script>
+
+        new window.VLibras.Widget({
+            rootPath: "https://vlibras.gov.br/app"
+        });
+
+    </script>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Seu JS -->
+
+    <script src="../js/meuscursos.js"></script>
+
+
+</body>
+
+</html>
