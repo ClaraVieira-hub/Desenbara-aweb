@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Página Inicial</title>
+
+
+    <!-- =========================
+         BOOTSTRAP
+    ========================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================
+         BOOTSTRAP ICONS
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+
+
+    <link rel="stylesheet" href="../css/inicio.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         MENU LATERAL
+    ====================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <span>Conecta</span>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="#" class="menu-item active">
+                <i class="bi bi-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-book"></i>
+                <span>Meus cursos</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-grid"></i>
+                <span>Explorar cursos</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-award"></i>
+                <span>Certificados</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-person"></i>
+                <span>Meu perfil</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="logout.html" class="menu-item logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sair</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================
+         FUNDO PARA MENU MOBILE
+    ====================================== -->
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- =====================================
+         CONTEÚDO PRINCIPAL
+    ====================================== -->
+
+    <div class="page">
+
+
+        <!-- =================================
+             HEADER
+        ================================== -->
+
+        <header class="topbar">
+
+
+            <!-- Menu mobile -->
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menu">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <!-- Título -->
+
+            <div class="page-title">
+
+                <i class="bi bi-house-fill"></i>
+
+                <span>Página inicial</span>
+
+            </div>
+
+
+            <!-- Busca -->
+
+            <div class="search-box">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar cursos..."
+                    aria-label="Buscar cursos"
+                >
+
+            </div>
+
+
+            <!-- Perfil -->
+
+            <button
+                class="profile-button"
+                aria-label="Perfil">
+
+                <i class="bi bi-person"></i>
+
+            </button>
+
+        </header>
+
+
+        <!-- =================================
+             CONTEÚDO
+        ================================== -->
+
+        <main class="content">
+
+
+            <!-- =================================
+                 CABEÇALHO DO CONTEÚDO
+            ================================== -->
+
+            <section class="welcome">
+
+                <div>
+
+                    <p class="welcome-small">
+                        Olá! 👋
+                    </p>
+
+                    <h1>
+                        Continue aprendendo.
+                    </h1>
+
+                    <p>
+                        Encontre cursos para transformar suas ideias em novas oportunidades.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 GRID PRINCIPAL
+            ================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- =================================
+                     COLUNA ESQUERDA
+                ================================== -->
+
+                <section class="connections-section">
+
+                    <div class="section-header">
+
+                        <div class="section-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Suas conexões e cursos
+                            </h2>
+
+                            <p>
+                                Cursos que fazem parte da sua jornada.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CURSOS ATUAIS -->
+
+                    <div class="current-courses">
+
+                        <h3>
+                            Cursos Atuais
+                        </h3>
+
+
+                        <!-- Curso 1 -->
+
+                        <article class="small-course">
+
+                            <h4>
+                                Tranças que Transformam
+                            </h4>
+
+                            <p>
+                                Fundação Banco do Brasil |
+                                Caminhos dos Palmares
+                            </p>
+
+                            <button class="secondary-button">
+                                MAIS INFORMAÇÕES
+                            </button>
+
+                            <button class="primary-button status-button">
+                                STATUS DO CURSO
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </article>
+
+
+                        <!-- Curso 2 -->
+
+                        <article class="small-course">
+
+                            <h4>
+                                Empreendedoras da Beleza
+                            </h4>
+
+                            <p>
+                                Grupo Boticário
+                            </p>
+
+                            <button class="secondary-button">
+                                MAIS INFORMAÇÕES
+                            </button>
+
+                            <button class="primary-button status-button">
+                                STATUS DO CURSO
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     CURSOS EM DESTAQUE
+                ================================== -->
+
+                <section class="featured-section">
+
+
+                    <!-- BLACKBRAIDS -->
+
+                    <article class="featured-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="imagens/blackbraids.jpg"
+                                alt="Curso BlackBraids"
+                            >
+
+                        </div>
+
+
+                        <div class="course-info">
+
+                            <span class="course-category">
+                                BELEZA E EMPREENDEDORISMO
+                            </span>
+
+                            <h2>
+                                Curso BlackBraids
+                            </h2>
+
+                            <p>
+                                Da linguagem do cabelo ao cuidado
+                                pós trança.
+                            </p>
+
+
+                            <div class="course-buttons">
+
+                                <button class="secondary-button">
+                                    MAIS INFORMAÇÕES
+                                </button>
+
+                                <button class="primary-button">
+                                    INSCREVA-SE
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POWER -->
+
+                    <article class="featured-card reverse">
+
+                        <div class="course-image">
+
+                            <img
+                                src="imagens/power.jpg"
+                                alt="Curso Power"
+                            >
+
+                        </div>
+
+
+                        <div class="course-info">
+
+                            <span class="course-category">
+                                NEGÓCIOS
+                            </span>
+
+                            <h2>
+                                Curso Power
+                            </h2>
+
+                            <p>
+                                Como gerenciar sua empresa?
+                            </p>
+
+
+                            <div class="course-buttons">
+
+                                <button class="secondary-button">
+                                    MAIS INFORMAÇÕES
+                                </button>
+
+                                <button class="primary-button">
+                                    INSCREVA-SE
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================
+                 BENEFÍCIOS
+            ================================== -->
+
+            <section class="benefits">
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Aprenda no seu ritmo
+                        </h3>
+
+                        <p>
+                            Cursos online para transformar
+                            sua história.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Certificados
+                        </h3>
+
+                        <p>
+                            Conquiste certificados e destaque
+                            suas conquistas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="bi bi-star"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Conteúdo de qualidade
+                        </h3>
+
+                        <p>
+                            Cursos desenvolvidos por
+                            instituições e especialistas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================
+         VLIBRAS
+    ====================================== -->
+
+    <div vw class="enabled">
+
+        <div vw-access-button class="active"></div>
+
+        <div vw-plugin-wrapper>
+
+            <div class="vw-plugin-top-wrapper"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+
+        new window.VLibras.Widget({
+            rootPath: "https://vlibras.gov.br/app"
+        });
+
+    </script>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Seu JavaScript -->
+
+    <script src="../js/inicio.js"></script>
+
+
+</body>
+
+</html>

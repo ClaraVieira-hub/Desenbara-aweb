@@ -1,0 +1,1307 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --roxo: #a65bea;
+    --roxo-escuro: #7435bd;
+    --lilas: #e9d7ff;
+    --lilas-claro: #f6efff;
+    --fundo: #eadcff;
+    --branco: #fffafa;
+    --texto: #241532;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: var(--texto);
+
+    background: linear-gradient(
+        135deg,
+        #f0e6ff 0%,
+        #dfc5ff 45%,
+        #b77cf3 100%
+    );
+
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 220px;
+    height: 100vh;
+
+    padding: 25px 18px;
+
+    background: rgba(255, 250, 255, 0.96);
+
+    border-right: 1px solid rgba(130, 70, 190, 0.08);
+
+    box-shadow: 5px 0 25px rgba(110, 55, 170, 0.08);
+
+    z-index: 1000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: transform 0.35s ease;
+
+}
+
+
+/* Logo */
+
+.sidebar-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 35px;
+
+}
+
+
+.logo {
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #a45bed,
+        #7b39c5
+    );
+
+    box-shadow: 0 5px 15px rgba(145, 75, 220, 0.25);
+
+}
+
+
+/* Menu */
+
+.sidebar-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.menu-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 14px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    color: #5c4c67;
+
+    font-size: 13px;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.menu-item i {
+
+    font-size: 18px;
+
+}
+
+
+.menu-item:hover {
+
+    color: var(--roxo-escuro);
+
+    background: #f0e2ff;
+
+    transform: translateX(4px);
+
+}
+
+
+.menu-item.active {
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #aa60ed,
+        #883fd0
+    );
+
+    box-shadow: 0 6px 15px rgba(140, 65, 210, 0.22);
+
+}
+
+
+.sidebar-bottom {
+
+    margin-top: auto;
+
+}
+
+
+.menu-item.logout:hover {
+
+    color: #9c3fbd;
+
+}
+
+
+/* =========================================
+   PÁGINA
+========================================= */
+
+.page {
+
+    margin-left: 220px;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+
+    height: 70px;
+
+    padding: 0 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: rgba(255, 250, 255, 0.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(120, 70, 170, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 500;
+
+}
+
+
+/* Título */
+
+.page-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+}
+
+
+.page-title i {
+
+    color: var(--roxo);
+
+}
+
+
+/* =========================================
+   BUSCA
+========================================= */
+
+.search-box {
+
+    max-width: 400px;
+
+    flex: 1;
+
+    height: 34px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 14px;
+
+    border-radius: 20px;
+
+    background: #ead9ff;
+
+    transition:
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+
+.search-box:focus-within {
+
+    background: #f1e6ff;
+
+    box-shadow: 0 0 0 3px rgba(167, 92, 236, 0.18);
+
+}
+
+
+.search-box i {
+
+    color: #8d55ba;
+
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   PERFIL
+========================================= */
+
+.profile-button {
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ead9ff;
+
+    color: #311f3e;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+
+}
+
+
+.profile-button:hover {
+
+    background: #d9bbff;
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================
+   BOTÃO MENU
+========================================= */
+
+.menu-button {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    font-size: 27px;
+
+    color: var(--roxo);
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.content {
+
+    padding: 30px;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.welcome {
+
+    margin-bottom: 25px;
+
+}
+
+
+.welcome-small {
+
+    margin-bottom: 2px;
+
+    font-size: 12px;
+
+    color: #795095;
+
+}
+
+
+.welcome h1 {
+
+    margin-bottom: 5px;
+
+    font-size: 25px;
+
+    color: #2c193d;
+
+}
+
+
+.welcome p:last-child {
+
+    color: #67546f;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 22px;
+
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.connections-section,
+.featured-section {
+
+    border-radius: 18px;
+
+    padding: 17px;
+
+    background: rgba(255, 250, 255, 0.48);
+
+    box-shadow:
+        0 8px 25px rgba(100, 45, 160, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.connections-section:hover,
+.featured-section:hover {
+
+    box-shadow:
+        0 14px 35px rgba(100, 45, 160, 0.14);
+
+}
+
+
+/* =========================================
+   CABEÇALHO DA SEÇÃO
+========================================= */
+
+.section-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    margin-bottom: 15px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.8);
+
+}
+
+
+.section-icon {
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--roxo-escuro);
+
+    background: #ead8ff;
+
+}
+
+
+.section-header h2 {
+
+    font-size: 13px;
+
+    margin: 0 0 3px;
+
+}
+
+
+.section-header p {
+
+    font-size: 8px;
+
+    margin: 0;
+
+    color: #77667e;
+
+}
+
+
+/* =========================================
+   CURSOS ATUAIS
+========================================= */
+
+.current-courses {
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background: rgba(229, 202, 255, 0.55);
+
+}
+
+
+.current-courses > h3 {
+
+    text-align: center;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================================
+   CURSO PEQUENO
+========================================= */
+
+.small-course {
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    border-radius: 13px;
+
+    text-align: center;
+
+    background: rgba(255, 250, 255, 0.82);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.small-course:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.small-course:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(105, 45, 160, 0.13);
+
+}
+
+
+.small-course h4 {
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.small-course p {
+
+    font-size: 8px;
+
+    line-height: 1.4;
+
+    color: #67546f;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================
+   CURSOS DESTAQUE
+========================================= */
+
+.featured-section {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+/* Card */
+
+.featured-card {
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    min-height: 230px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: rgba(255, 250, 255, 0.8);
+
+    box-shadow:
+        0 8px 20px rgba(100, 45, 160, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.featured-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 16px 35px rgba(100, 45, 160, 0.16);
+
+}
+
+
+/* Imagem */
+
+.course-image {
+
+    min-height: 230px;
+
+    overflow: hidden;
+
+}
+
+
+.course-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.featured-card:hover .course-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+/* Informações */
+
+.course-info {
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.course-category {
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    color: #9a5bc7;
+
+    margin-bottom: 5px;
+
+}
+
+
+.course-info h2 {
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.course-info p {
+
+    font-size: 11px;
+
+    color: #66526f;
+
+    margin-bottom: 20px;
+
+}
+
+
+.course-buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    max-width: 280px;
+
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.secondary-button,
+.primary-button {
+
+    height: 30px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    padding: 0 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+
+}
+
+
+.secondary-button {
+
+    background: #ffffff;
+
+    color: #4b315a;
+
+}
+
+
+.secondary-button:hover {
+
+    background: #f3e7ff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(90, 40, 130, 0.12);
+
+}
+
+
+.primary-button {
+
+    background: linear-gradient(
+        135deg,
+        #b15ff2,
+        #9144d5
+    );
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    box-shadow:
+        0 5px 12px rgba(130, 55, 200, 0.22);
+
+}
+
+
+.primary-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 18px rgba(130, 55, 200, 0.3);
+
+}
+
+
+.primary-button i {
+
+    transition: transform 0.25s ease;
+
+}
+
+
+.primary-button:hover i {
+
+    transform: translateX(4px);
+
+}
+
+
+/* Botões dos cursos atuais */
+
+.status-button {
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   BENEFÍCIOS
+========================================= */
+
+.benefits {
+
+    margin-top: 22px;
+
+    padding: 22px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    border-radius: 18px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #a85bea,
+        #8740d0
+    );
+
+    box-shadow:
+        0 10px 30px rgba(110, 45, 170, 0.18);
+
+}
+
+
+.benefit {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 10px;
+
+    border-radius: 14px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.benefit:hover {
+
+    background: rgba(255,255,255,0.12);
+
+    transform: translateY(-3px);
+
+}
+
+
+.benefit-icon {
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #7737b8;
+
+    background: white;
+
+    font-size: 21px;
+
+}
+
+
+.benefit h3 {
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.benefit p {
+
+    font-size: 9px;
+
+    margin: 0;
+
+    opacity: 0.9;
+
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.overlay {
+
+    display: none;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+
+        transform: translateX(-100%);
+
+    }
+
+
+    .sidebar.open {
+
+        transform: translateX(0);
+
+    }
+
+
+    .page {
+
+        margin-left: 0;
+
+    }
+
+
+    .menu-button {
+
+        display: block;
+
+    }
+
+
+    .overlay {
+
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(30, 10, 40, 0.3);
+
+        z-index: 900;
+
+        backdrop-filter: blur(2px);
+
+    }
+
+
+    .overlay.active {
+
+        display: block;
+
+    }
+
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .connections-section {
+
+        order: 2;
+
+    }
+
+
+    .featured-section {
+
+        order: 1;
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .topbar {
+
+        height: 58px;
+
+        padding: 0 12px;
+
+        gap: 10px;
+
+    }
+
+
+    .page-title {
+
+        font-size: 10px;
+
+    }
+
+
+    .page-title i {
+
+        display: none;
+
+    }
+
+
+    .search-box {
+
+        max-width: none;
+
+        height: 29px;
+
+        padding: 0 10px;
+
+    }
+
+
+    .search-box input {
+
+        font-size: 9px;
+
+    }
+
+
+    .profile-button {
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 16px;
+
+    }
+
+
+    .content {
+
+        padding: 16px 10px 25px;
+
+    }
+
+
+    .welcome {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .welcome h1 {
+
+        font-size: 18px;
+
+    }
+
+
+    .welcome p:last-child {
+
+        font-size: 9px;
+
+    }
+
+
+    .dashboard-grid {
+
+        gap: 14px;
+
+    }
+
+
+    .connections-section,
+    .featured-section {
+
+        padding: 10px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .section-header {
+
+        padding: 10px;
+
+    }
+
+
+    .section-header h2 {
+
+        font-size: 11px;
+
+    }
+
+
+    .current-courses {
+
+        padding: 10px;
+
+    }
+
+
+    .current-courses > h3 {
+
+        font-size: 14px;
+
+    }
+
+
+    .featured-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .course-image {
+
+        height: 170px;
+
+        min-height: 170px;
+
+    }
+
+
+    .course-info {
+
+        padding: 18px;
+
+        text-align: center;
+
+    }
+
+
+    .course-info h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .course-info p {
+
+        font-size: 9px;
+
+    }
+
+
+    .course-buttons {
+
+        max-width: none;
+
+    }
+
+
+    .benefits {
+
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+        padding: 14px;
+
+    }
+
+
+    .benefit {
+
+        padding: 8px;
+
+    }
+
+
+    .benefit-icon {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 17px;
+
+    }
+
+}
