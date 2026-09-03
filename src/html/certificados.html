@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Certificados | Conecta Beleza</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/certificados.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+         OVERLAY MOBILE
+    =========================================== -->
+
+    <div class="sidebar-overlay"></div>
+
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                <i class="bi bi-stars"></i>
+            </div>
+
+            <h2>Desenbaraça<span>Web</span> </h2>
+
+        </div>
+
+
+       <nav class="sidebar-menu">
+
+            <a
+                href="../html/inicio.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-house"></i>
+
+                <span>Página inicial</span>
+
+            </a>
+
+
+            <a
+                href="../html/meuscursos.html"
+                class="menu-item active"
+            >
+
+                <i class="bi bi-book"></i>
+
+                <span>Meus cursos</span>
+
+            </a>
+
+
+            <a
+                href="../html/explorar.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-grid"></i>
+
+                <span>Explorar cursos</span>
+
+            </a>
+
+
+            <a
+                href="../html/certificados.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-award"></i>
+
+                <span>Certificados</span>
+
+            </a>
+
+
+            <a
+                href="../html/perfil.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-person"></i>
+
+                <span>Meu perfil</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="../html/logout.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>  
+
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL
+    =========================================== -->
+
+    <main class="main-content">
+
+
+        <!-- ======================================
+             TOPBAR
+        ======================================= -->
+
+        <header class="topbar">
+
+            <button
+                class="menu-button"
+                id="menuButton">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="page-title">
+
+                <h1>Certificados</h1>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Pesquisar certificado...">
+
+                </div>
+
+
+                <button class="profile-button">
+
+                    <i class="bi bi-person"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ======================================
+             PÁGINA DE CERTIFICADOS
+        ======================================= -->
+
+        <section class="certificates-page">
+
+
+            <!-- ==================================
+                 CABEÇALHO
+            =================================== -->
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="section-label">
+                        SUA CONQUISTA
+                    </span>
+
+                    <h2>
+                        Meus certificados
+                    </h2>
+
+                    <p>
+                        Aqui estão os certificados dos
+                        cursos que você concluiu.
+                    </p>
+
+                </div>
+
+
+                <div class="certificate-total">
+
+                    <div class="total-icon">
+
+                        <i class="bi bi-award-fill"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong id="certificateCount">
+                            4
+                        </strong>
+
+                        <span>
+                            certificados
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 DESTAQUE
+            =================================== -->
+
+            <div class="achievement-banner">
+
+                <div class="achievement-icon">
+
+                    <i class="bi bi-trophy-fill"></i>
+
+                </div>
+
+
+                <div class="achievement-text">
+
+                    <span>
+                        PARABÉNS!
+                    </span>
+
+                    <h3>
+                        Você está construindo sua trajetória.
+                    </h3>
+
+                    <p>
+                        Continue aprendendo e conquiste
+                        novas certificações.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-decoration">
+
+                    <i class="bi bi-stars"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 FILTROS
+            =================================== -->
+
+            <div class="certificate-toolbar">
+
+
+                <div class="filter-buttons">
+
+                    <button
+                        class="filter-btn active"
+                        data-filter="todos">
+
+                        Todos
+
+                    </button>
+
+
+                    <button
+                        class="filter-btn"
+                        data-filter="cabelo">
+
+                        <i class="bi bi-scissors"></i>
+
+                        Cabelo
+
+                    </button>
+
+
+                    <button
+                        class="filter-btn"
+                        data-filter="beleza">
+
+                        <i class="bi bi-stars"></i>
+
+                        Beleza
+
+                    </button>
+
+
+                    <button
+                        class="filter-btn"
+                        data-filter="empreendedorismo">
+
+                        <i class="bi bi-briefcase"></i>
+
+                        Empreendedorismo
+
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="verify-btn"
+                    id="verifyButton">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    Validar certificado
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 GRID
+            =================================== -->
+
+            <div
+                class="certificates-grid"
+                id="certificatesContainer">
+
+
+                <!-- =================================
+                     CERTIFICADO 1
+                ================================== -->
+
+                <article
+                    class="certificate-card"
+                    data-category="cabelo beleza">
+
+                    <div class="certificate-preview">
+
+                        <div class="certificate-pattern"></div>
+
+
+                        <div class="certificate-logo">
+
+                            <i class="bi bi-stars"></i>
+
+                            <span>
+                                Conecta<span>Beleza</span>
+                            </span>
+
+                        </div>
+
+
+                        <div class="certificate-medal">
+
+                            <i class="bi bi-award-fill"></i>
+
+                        </div>
+
+
+                        <span class="certificate-type">
+                            CERTIFICADO DE CONCLUSÃO
+                        </span>
+
+
+                        <h3>
+                            Trancista
+                        </h3>
+
+
+                        <div class="certificate-line"></div>
+
+
+                        <p>
+                            Curso concluído com sucesso
+                        </p>
+
+                    </div>
+
+
+                    <div class="certificate-content">
+
+                        <div class="certificate-heading">
+
+                            <div>
+
+                                <span class="certificate-category">
+                                    CABELO
+                                </span>
+
+                                <h3>
+                                    Trancista
+                                </h3>
+
+                            </div>
+
+                            <i class="bi bi-check-circle-fill completed"></i>
+
+                        </div>
+
+
+                        <div class="certificate-details">
+
+                            <div>
+
+                                <i class="bi bi-calendar3"></i>
+
+                                <span>
+
+                                    <small>
+                                        Concluído em
+                                    </small>
+
+                                    15/08/2026
+
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="bi bi-clock"></i>
+
+                                <span>
+
+                                    <small>
+                                        Carga horária
+                                    </small>
+
+                                    10 horas
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="certificate-code">
+
+                            <span>
+                                Código de validação
+                            </span>
+
+                            <strong>
+                                CB-TRANC-2026-001
+                            </strong>
+
+                        </div>
+
+
+                        <div class="certificate-actions">
+
+                            <button
+                                class="view-certificate"
+                                data-certificate="Trancista">
+
+                                <i class="bi bi-eye"></i>
+
+                                Visualizar
+
+                            </button>
+
+
+                            <button
+                                class="download-certificate"
+                                data-certificate="Trancista">
+
+                                <i class="bi bi-download"></i>
+
+                                Baixar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     CERTIFICADO 2
+                ================================== -->
+
+                <article
+                    class="certificate-card"
+                    data-category="beleza">
+
+                    <div class="certificate-preview">
+
+                        <div class="certificate-pattern"></div>
+
+
+                        <div class="certificate-logo">
+
+                            <i class="bi bi-stars"></i>
+
+                            <span>
+                                Conecta<span>Beleza</span>
+                            </span>
+
+                        </div>
+
+
+                        <div class="certificate-medal">
+
+                            <i class="bi bi-award-fill"></i>
+
+                        </div>
+
+
+                        <span class="certificate-type">
+                            CERTIFICADO DE CONCLUSÃO
+                        </span>
+
+
+                        <h3>
+                            Maquiagem
+                        </h3>
+
+
+                        <div class="certificate-line"></div>
+
+
+                        <p>
+                            Curso concluído com sucesso
+                        </p>
+
+                    </div>
+
+
+                    <div class="certificate-content">
+
+                        <div class="certificate-heading">
+
+                            <div>
+
+                                <span class="certificate-category">
+                                    BELEZA
+                                </span>
+
+                                <h3>
+                                    Maquiagem
+                                </h3>
+
+                            </div>
+
+                            <i class="bi bi-check-circle-fill completed"></i>
+
+                        </div>
+
+
+                        <div class="certificate-details">
+
+                            <div>
+
+                                <i class="bi bi-calendar3"></i>
+
+                                <span>
+
+                                    <small>
+                                        Concluído em
+                                    </small>
+
+                                    03/08/2026
+
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="bi bi-clock"></i>
+
+                                <span>
+
+                                    <small>
+                                        Carga horária
+                                    </small>
+
+                                    8 horas
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="certificate-code">
+
+                            <span>
+                                Código de validação
+                            </span>
+
+                            <strong>
+                                CB-MAQ-2026-002
+                            </strong>
+
+                        </div>
+
+
+                        <div class="certificate-actions">
+
+                            <button
+                                class="view-certificate"
+                                data-certificate="Maquiagem">
+
+                                <i class="bi bi-eye"></i>
+
+                                Visualizar
+
+                            </button>
+
+
+                            <button
+                                class="download-certificate"
+                                data-certificate="Maquiagem">
+
+                                <i class="bi bi-download"></i>
+
+                                Baixar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     CERTIFICADO 3
+                ================================== -->
+
+                <article
+                    class="certificate-card"
+                    data-category="empreendedorismo">
+
+                    <div class="certificate-preview">
+
+                        <div class="certificate-pattern"></div>
+
+
+                        <div class="certificate-logo">
+
+                            <i class="bi bi-stars"></i>
+
+                            <span>
+                                Conecta<span>Beleza</span>
+                            </span>
+
+                        </div>
+
+
+                        <div class="certificate-medal">
+
+                            <i class="bi bi-award-fill"></i>
+
+                        </div>
+
+
+                        <span class="certificate-type">
+                            CERTIFICADO DE CONCLUSÃO
+                        </span>
+
+
+                        <h3>
+                            Empreendedorismo
+                        </h3>
+
+
+                        <div class="certificate-line"></div>
+
+
+                        <p>
+                            Curso concluído com sucesso
+                        </p>
+
+                    </div>
+
+
+                    <div class="certificate-content">
+
+                        <div class="certificate-heading">
+
+                            <div>
+
+                                <span class="certificate-category">
+                                    EMPREENDEDORISMO
+                                </span>
+
+                                <h3>
+                                    Empreendedorismo
+                                </h3>
+
+                            </div>
+
+                            <i class="bi bi-check-circle-fill completed"></i>
+
+                        </div>
+
+
+                        <div class="certificate-details">
+
+                            <div>
+
+                                <i class="bi bi-calendar3"></i>
+
+                                <span>
+
+                                    <small>
+                                        Concluído em
+                                    </small>
+
+                                    25/07/2026
+
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="bi bi-clock"></i>
+
+                                <span>
+
+                                    <small>
+                                        Carga horária
+                                    </small>
+
+                                    12 horas
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="certificate-code">
+
+                            <span>
+                                Código de validação
+                            </span>
+
+                            <strong>
+                                CB-EMP-2026-003
+                            </strong>
+
+                        </div>
+
+
+                        <div class="certificate-actions">
+
+                            <button
+                                class="view-certificate"
+                                data-certificate="Empreendedorismo">
+
+                                <i class="bi bi-eye"></i>
+
+                                Visualizar
+
+                            </button>
+
+
+                            <button
+                                class="download-certificate"
+                                data-certificate="Empreendedorismo">
+
+                                <i class="bi bi-download"></i>
+
+                                Baixar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     CERTIFICADO 4
+                ================================== -->
+
+                <article
+                    class="certificate-card"
+                    data-category="beleza">
+
+                    <div class="certificate-preview">
+
+                        <div class="certificate-pattern"></div>
+
+
+                        <div class="certificate-logo">
+
+                            <i class="bi bi-stars"></i>
+
+                            <span>
+                                Conecta<span>Beleza</span>
+                            </span>
+
+                        </div>
+
+
+                        <div class="certificate-medal">
+
+                            <i class="bi bi-award-fill"></i>
+
+                        </div>
+
+
+                        <span class="certificate-type">
+                            CERTIFICADO DE CONCLUSÃO
+                        </span>
+
+
+                        <h3>
+                            Penteadista
+                        </h3>
+
+
+                        <div class="certificate-line"></div>
+
+
+                        <p>
+                            Curso concluído com sucesso
+                        </p>
+
+                    </div>
+
+
+                    <div class="certificate-content">
+
+                        <div class="certificate-heading">
+
+                            <div>
+
+                                <span class="certificate-category">
+                                    BELEZA
+                                </span>
+
+                                <h3>
+                                    Penteadista
+                                </h3>
+
+                            </div>
+
+                            <i class="bi bi-check-circle-fill completed"></i>
+
+                        </div>
+
+
+                        <div class="certificate-details">
+
+                            <div>
+
+                                <i class="bi bi-calendar3"></i>
+
+                                <span>
+
+                                    <small>
+                                        Concluído em
+                                    </small>
+
+                                    10/07/2026
+
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="bi bi-clock"></i>
+
+                                <span>
+
+                                    <small>
+                                        Carga horária
+                                    </small>
+
+                                    10 horas
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="certificate-code">
+
+                            <span>
+                                Código de validação
+                            </span>
+
+                            <strong>
+                                CB-PEN-2026-004
+                            </strong>
+
+                        </div>
+
+
+                        <div class="certificate-actions">
+
+                            <button
+                                class="view-certificate"
+                                data-certificate="Penteadista">
+
+                                <i class="bi bi-eye"></i>
+
+                                Visualizar
+
+                            </button>
+
+
+                            <button
+                                class="download-certificate"
+                                data-certificate="Penteadista">
+
+                                <i class="bi bi-download"></i>
+
+                                Baixar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- ESTADO VAZIO -->
+
+            <div
+                class="empty-state"
+                id="emptyState"
+                style="display: none;">
+
+                <i class="bi bi-award"></i>
+
+                <h3>
+                    Nenhum certificado encontrado
+                </h3>
+
+                <p>
+                    Tente pesquisar por outro curso
+                    ou categoria.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         MODAL DE VISUALIZAÇÃO
+    =========================================== -->
+
+    <div
+        class="modal fade"
+        id="certificateModal"
+        tabindex="-1">
+
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+
+            <div class="modal-content certificate-modal">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Certificado
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <div
+                        class="certificate-full"
+                        id="certificateFull">
+
+                        <div class="full-decoration"></div>
+
+
+                        <div class="full-logo">
+
+                            <i class="bi bi-stars"></i>
+
+                            <strong>
+                                Conecta<span>Beleza</span>
+                            </strong>
+
+                        </div>
+
+
+                        <p class="full-title">
+                            CERTIFICADO DE CONCLUSÃO
+                        </p>
+
+
+                        <h1 id="modalCourseName">
+                            Trancista
+                        </h1>
+
+
+                        <p>
+                            Certificamos que
+                        </p>
+
+
+                        <h2>
+                            Ana Clara
+                        </h2>
+
+
+                        <p>
+                            concluiu com êxito o curso,
+                            demonstrando dedicação e
+                            participação nas atividades
+                            propostas.
+                        </p>
+
+
+                        <div class="full-info">
+
+                            <span>
+                                <strong>
+                                    10 horas
+                                </strong>
+                                Carga horária
+                            </span>
+
+                            <span>
+                                <strong>
+                                    15/08/2026
+                                </strong>
+                                Data de conclusão
+                            </span>
+
+                            <span>
+                                <strong>
+                                    CB-TRANC-2026-001
+                                </strong>
+                                Código de validação
+                            </span>
+
+                        </div>
+
+
+                        <div class="signature-area">
+
+                            <div>
+                                <div class="signature-line"></div>
+
+                                <span>
+                                    Conecta Beleza
+                                </span>
+                            </div>
+
+                            <div class="full-medal">
+
+                                <i class="bi bi-award-fill"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        class="download-modal-btn"
+                        id="modalDownload">
+
+                        <i class="bi bi-download"></i>
+
+                        Baixar certificado
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         MODAL VALIDAR
+    =========================================== -->
+
+    <div
+        class="modal fade"
+        id="validationModal"
+        tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content validation-modal">
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            AUTENTICIDADE
+                        </span>
+
+                        <h3>
+                            Validar certificado
+                        </h3>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <p>
+                        Digite o código de validação
+                        presente no certificado.
+                    </p>
+
+
+                    <div class="validation-input">
+
+                        <i class="bi bi-shield-check"></i>
+
+                        <input
+                            type="text"
+                            id="validationCode"
+                            placeholder="Ex.: CB-TRANC-2026-001">
+
+                    </div>
+
+
+                    <button
+                        class="validate-btn"
+                        id="validateCode">
+
+                        Validar certificado
+
+                    </button>
+
+
+                    <div
+                        class="validation-result"
+                        id="validationResult">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         VLibras
+    =========================================== -->
+
+    <div vw class="enabled">
+
+        <div
+            vw-access-button
+            class="active">
+        </div>
+
+        <div vw-plugin-wrapper>
+
+            <div
+                class="vw-plugin-top-wrapper">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- VLibras -->
+
+    <script
+        src="https://vlibras.gov.br/app/vlibras-plugin.js">
+    </script>
+
+    <script>
+
+        new window.VLibras.Widget({
+
+            rootPath:
+                "https://vlibras.gov.br/app"
+
+        });
+
+    </script>
+
+
+    <!-- JS -->
+
+    <script src="../js/certificados.js"></script>
+
+</body>
+
+</html>

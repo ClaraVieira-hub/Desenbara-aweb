@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Perfil | Desembaraça Web </title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/perfil.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         OVERLAY MOBILE
+    =========================================== -->
+
+    <div class="sidebar-overlay"></div>
+
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                <i class="bi bi-stars"></i>
+            </div>
+
+            <h2>Desenbaraça<span>Web</span></h2>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="../html/inicio.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-house"></i>
+
+                <span>Página inicial</span>
+
+            </a>
+
+
+            <a
+                href="../html/meuscursos.html"
+                class="menu-item active"
+            >
+
+                <i class="bi bi-book"></i>
+
+                <span>Meus cursos</span>
+
+            </a>
+
+
+            <a
+                href="../html/explorar.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-grid"></i>
+
+                <span>Explorar cursos</span>
+
+            </a>
+
+
+            <a
+                href="../html/certificados.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-award"></i>
+
+                <span>Certificados</span>
+
+            </a>
+
+
+            <a
+                href="../html/perfil.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-person"></i>
+
+                <span>Meu perfil</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="../html/logout.html"
+                class="menu-item"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>  
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                <i class="bi bi-question-circle"></i>
+                <span>Ajuda</span>
+            </a>
+
+            <a href="logout.html" class="logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sair</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL
+    =========================================== -->
+
+    <main class="main-content">
+
+
+        <!-- ======================================
+             TOPBAR
+        ======================================= -->
+
+        <header class="topbar">
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menu">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="page-title">
+
+                <h1>Meu perfil</h1>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Pesquisar...">
+
+                </div>
+
+
+                <button
+                    class="profile-button"
+                    id="profileButton">
+
+                    <i class="bi bi-person"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- ======================================
+             PERFIL
+        ======================================= -->
+
+        <section class="profile-page">
+
+
+            <!-- CABEÇALHO DO PERFIL -->
+
+            <div class="profile-header">
+
+                <div class="profile-photo-area">
+
+                    <div class="profile-photo" id="profilePhoto">
+
+                        <i class="bi bi-person-fill"></i>
+
+                    </div>
+
+
+                    <label
+                        for="photoInput"
+                        class="change-photo">
+
+                        <i class="bi bi-camera-fill"></i>
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="photoInput"
+                        accept="image/*"
+                        hidden>
+
+                </div>
+
+
+                <div class="profile-intro">
+
+                    <span class="profile-welcome">
+                        Bem-vinda!
+                    </span>
+
+                    <h2 id="profileName">
+                        Ana Clara
+                    </h2>
+
+                    <p id="profileEmail">
+                        anaclara@email.com
+                    </p>
+
+                    <span class="member-badge">
+                        <i class="bi bi-stars"></i>
+                        Membro da comunidade
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="edit-profile-btn"
+                    id="editButton">
+
+                    <i class="bi bi-pencil"></i>
+
+                    <span>Editar perfil</span>
+
+                </button>
+
+            </div>
+
+
+            <!-- ==================================
+                 ESTATÍSTICAS
+            =================================== -->
+
+            <div class="profile-stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-book"></i>
+                    </div>
+
+                    <div>
+                        <strong id="coursesNumber">4</strong>
+                        <span>Cursos inscritos</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+
+                    <div>
+                        <strong id="completedNumber">2</strong>
+                        <span>Cursos concluídos</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+
+                    <div>
+                        <strong id="certificateNumber">2</strong>
+                        <span>Certificados</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+
+                    <div>
+                        <strong>18h</strong>
+                        <span>Tempo de estudo</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================
+                 GRID DO PERFIL
+            =================================== -->
+
+            <div class="profile-grid">
+
+
+                <!-- INFORMAÇÕES PESSOAIS -->
+
+                <div class="profile-card personal-card">
+
+                    <div class="card-title">
+
+                        <div>
+
+                            <span class="section-label">
+                                CONTA
+                            </span>
+
+                            <h3>Informações pessoais</h3>
+
+                        </div>
+
+                        <i class="bi bi-person-vcard"></i>
+
+                    </div>
+
+
+                    <form id="profileForm">
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Nome completo
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        value="Ana Clara"
+                                        disabled>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    E-mail
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-envelope"></i>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        value="anaclara@email.com"
+                                        disabled>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Telefone
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-telephone"></i>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        value="(71) 99999-9999"
+                                        disabled>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="city">
+                                    Cidade
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-geo-alt"></i>
+
+                                    <input
+                                        type="text"
+                                        id="city"
+                                        value="Camaçari - BA"
+                                        disabled>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="interest">
+                                Área de interesse
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-stars"></i>
+
+                                <select id="interest" disabled>
+
+                                    <option value="cabelo">
+                                        Cabelo e Tranças
+                                    </option>
+
+                                    <option value="maquiagem">
+                                        Maquiagem
+                                    </option>
+
+                                    <option value="estetica">
+                                        Estética
+                                    </option>
+
+                                    <option value="empreendedorismo">
+                                        Empreendedorismo
+                                    </option>
+
+                                    <option value="moda">
+                                        Moda
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BOTÕES -->
+
+                        <div
+                            class="form-buttons"
+                            id="formButtons">
+
+                            <button
+                                type="button"
+                                class="cancel-btn"
+                                id="cancelButton">
+
+                                Cancelar
+
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="save-btn">
+
+                                <i class="bi bi-check-lg"></i>
+
+                                Salvar alterações
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <!-- ==================================
+                     SEGURANÇA
+                =================================== -->
+
+                <div class="profile-card security-card">
+
+                    <div class="card-title">
+
+                        <div>
+
+                            <span class="section-label">
+                                SEGURANÇA
+                            </span>
+
+                            <h3>Segurança da conta</h3>
+
+                        </div>
+
+                        <i class="bi bi-shield-lock"></i>
+
+                    </div>
+
+
+                    <div class="security-item">
+
+                        <div class="security-icon">
+
+                            <i class="bi bi-lock"></i>
+
+                        </div>
+
+                        <div class="security-text">
+
+                            <strong>Senha</strong>
+
+                            <p>
+                                Proteja sua conta utilizando
+                                uma senha segura.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="security-btn"
+                            id="passwordButton">
+
+                            Alterar
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="security-item">
+
+                        <div class="security-icon">
+
+                            <i class="bi bi-envelope-check"></i>
+
+                        </div>
+
+                        <div class="security-text">
+
+                            <strong>E-mail verificado</strong>
+
+                            <p>
+                                Seu endereço de e-mail está
+                                verificado.
+                            </p>
+
+                        </div>
+
+                        <span class="verified">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            Verificado
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="security-item">
+
+                        <div class="security-icon">
+
+                            <i class="bi bi-phone"></i>
+
+                        </div>
+
+                        <div class="security-text">
+
+                            <strong>Telefone</strong>
+
+                            <p>
+                                Telefone cadastrado na conta.
+                            </p>
+
+                        </div>
+
+                        <span class="verified">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            Ativo
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================
+                     PREFERÊNCIAS
+                =================================== -->
+
+                <div class="profile-card preferences-card">
+
+                    <div class="card-title">
+
+                        <div>
+
+                            <span class="section-label">
+                                PREFERÊNCIAS
+                            </span>
+
+                            <h3>Minhas preferências</h3>
+
+                        </div>
+
+                        <i class="bi bi-sliders"></i>
+
+                    </div>
+
+
+                    <div class="preference-item">
+
+                        <div>
+
+                            <strong>
+                                Notificações de cursos
+                            </strong>
+
+                            <p>
+                                Receba novidades sobre novos cursos.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="preference-item">
+
+                        <div>
+
+                            <strong>
+                                Lembretes de estudo
+                            </strong>
+
+                            <p>
+                                Receba lembretes para continuar
+                                seus cursos.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="preference-item">
+
+                        <div>
+
+                            <strong>
+                                Novidades da comunidade
+                            </strong>
+
+                            <p>
+                                Fique por dentro das novidades.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox">
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================
+                     ÁREA DE ATUAÇÃO
+                =================================== -->
+
+                <div class="profile-card interests-card">
+
+                    <div class="card-title">
+
+                        <div>
+
+                            <span class="section-label">
+                                APRENDIZADO
+                            </span>
+
+                            <h3>Áreas de interesse</h3>
+
+                        </div>
+
+                        <i class="bi bi-heart"></i>
+
+                    </div>
+
+
+                    <div class="interest-tags">
+
+                        <span>
+                            <i class="bi bi-scissors"></i>
+                            Tranças
+                        </span>
+
+                        <span>
+                            <i class="bi bi-stars"></i>
+                            Beleza
+                        </span>
+
+                        <span>
+                            <i class="bi bi-briefcase"></i>
+                            Empreendedorismo
+                        </span>
+
+                        <span>
+                            <i class="bi bi-instagram"></i>
+                            Marketing
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="interest-btn"
+                        id="interestButton">
+
+                        <i class="bi bi-plus-lg"></i>
+
+                        Adicionar interesse
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         MODAL ALTERAR SENHA
+    =========================================== -->
+
+    <div
+        class="modal fade"
+        id="passwordModal"
+        tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content password-modal">
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            SEGURANÇA
+                        </span>
+
+                        <h3>Alterar senha</h3>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <form id="passwordForm">
+
+                        <div class="form-group">
+
+                            <label for="currentPassword">
+                                Senha atual
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="currentPassword"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="newPassword">
+                                Nova senha
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-key"></i>
+
+                                <input
+                                    type="password"
+                                    id="newPassword"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="confirmPassword">
+                                Confirmar nova senha
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-key-fill"></i>
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="save-btn password-save">
+
+                            Alterar senha
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         VLibras
+    =========================================== -->
+
+    <div vw class="enabled">
+
+        <div vw-access-button class="active"></div>
+
+        <div vw-plugin-wrapper>
+
+            <div class="vw-plugin-top-wrapper"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- VLibras -->
+    <script
+        src="https://vlibras.gov.br/app/vlibras-plugin.js">
+    </script>
+
+    <script>
+
+        new window.VLibras.Widget({
+            rootPath: "https://vlibras.gov.br/app"
+        });
+
+    </script>
+
+
+    <!-- JS -->
+    <script src="../js/perfil.js"></script>
+
+</body>
+
+</html>
