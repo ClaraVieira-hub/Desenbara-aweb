@@ -87,63 +87,83 @@ body {
 
 
 /* LOGO */
-
 .logo-area {
-
     display: flex;
-
     align-items: center;
-
-    gap: 10px;
-
-    padding:
-        0 8px 30px;
-
+    gap: 12px;
+    padding-bottom: 30px;
 }
 
 
+/* Ícone da logo */
+
 .logo-icon {
-
-    width: 40px;
-    height: 40px;
-
-    border-radius: 13px;
+    width: 46px;
+    height: 46px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #b76cf2,
+        #7b3fc6
+    );
+
     color: white;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--roxo),
-            var(--roxo-escuro)
-        );
+    font-size: 25px;
 
-    font-size: 20px;
+    flex-shrink: 0;
 
+    box-shadow: 0 6px 18px rgba(123, 63, 198, 0.20);
+
+    transition: all 0.3s ease;
 }
 
+
+/* Efeito ao passar o mouse */
+
+.logo-icon:hover {
+    transform: rotate(-5deg) scale(1.05);
+
+    box-shadow:
+        0 8px 22px rgba(123, 63, 198, 0.30);
+}
+
+
+/* Nome do site */
 
 .logo-area h2 {
-
-    font-size: 18px;
-
-    font-weight: 800;
-
     margin: 0;
 
+    font-size: 21px;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    color: #21152d;
+
+    letter-spacing: -0.5px;
 }
 
+
+/* "Web" em roxo */
 
 .logo-area h2 span {
+    display: block;
 
-    color: var(--roxo);
+    color: #8746d3;
 
+    font-size: 21px;
+    font-weight: 700;
+
+    margin-top: 2px;
 }
+
 
 
 /* MENU */
